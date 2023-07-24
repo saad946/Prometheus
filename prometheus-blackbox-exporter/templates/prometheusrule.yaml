@@ -4,7 +4,7 @@ kind: PrometheusRule
 metadata:
   name: {{ template "prometheus-blackbox-exporter.fullname" . }}
   {{- with .Values.prometheusRule.namespace }}
-  namespace: {{ . }}
+  namespace: {{ .Values.namespace }}
   {{- end }}
   labels:
     {{- include "prometheus-blackbox-exporter.labels" . | nindent 4 }}

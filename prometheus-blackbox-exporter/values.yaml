@@ -202,6 +202,8 @@ serviceAccount:
 ## termination among other things for CouchDB deployments which are accessed
 ## from outside the Kubernetes cluster.
 ## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
+namespace: prometheus-blackbox-exporter
+
 ingress:
   enabled: false
   className: ""
